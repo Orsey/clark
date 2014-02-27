@@ -1,0 +1,54 @@
+/*
+Theme Name:     Clark Contractors
+Description:    Child theme to Vantage
+Author:         Moxy Ox
+Template:       vantage
+
+(optional values you can add: Theme URI, Author URI, Version)
+*/
+
+@import url("../vantage/style.css");
+
+.main-navigation {
+	background: #fff;
+	border-bottom: 3px solid #FEC42A;
+	padding: 10px 0;
+}
+#search-icon .searchform {
+	padding: 10px;
+	font-size: 1.9em;
+	border-bottom: 3px solid #fec42a;
+}
+h3.home-page {
+	font-size: 2em;
+	color:#005184;
+	text-align: center;
+	font-weight: 300;
+}
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6, .origin-widget.origin-widget-call-to-action-simple-light_dashed .title, article.post .entry-header h1.entry-title a, article.page .entry-header h1.entry-title a {
+	color:#005184 !important;
+	font-weight: 300;
+}
+.vantage-grid-loop article .grid-thumbnail img {
+	height: 140px;
+	width: auto;
+}
+.team-member-text {
+	display: none;
+}
+.team-member {
+	width: 23%;
+	float: left;
+}
+#footer-widgets .widget .widget-title {
+	font-size: 1.5em;
+	font-weight: 300;
+	border-bottom: dotted 1px #cccccc;
+	padding-bottom: 10px;
+}
+#colophon h3 {
+	font-size: 1.2em;
+	font-weight: 300;
+	margin: 10px 0 5px 0;
+	color: #fff;
+}
