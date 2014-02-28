@@ -9,42 +9,39 @@ Template:       vantage
 
 @import url("../vantage/style.css");
 
+/* Structure/Color
+------------------------------------------ */
+.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6, .origin-widget.origin-widget-call-to-action-simple-light_dashed .title, article.post .entry-header h1.entry-title a, article.page .entry-header h1.entry-title a,article.post .entry-header h1.entry-title, article.page .entry-header h1.entry-title {
+	color:#005184 !important;
+	font-weight: 300;
+}
+a {
+	color:#005184 !important;
+	text-decoration: none;
+}
 .main-navigation {
 	background: #fff;
 	border-bottom: 3px solid #FEC42A;
 	padding: 10px 0;
+}
+.main-navigation ul li:hover {
+	color: #fff !important;
 }
 #search-icon .searchform {
 	padding: 10px;
 	font-size: 1.9em;
 	border-bottom: 3px solid #fec42a;
 }
-h3.home-page {
-	font-size: 2em;
-	color:#005184;
-	text-align: center;
-	font-weight: 300;
-}
-.entry-content h1, .entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6, .origin-widget.origin-widget-call-to-action-simple-light_dashed .title, article.post .entry-header h1.entry-title a, article.page .entry-header h1.entry-title a {
-	color:#005184 !important;
-	font-weight: 300;
-}
-.vantage-grid-loop article .grid-thumbnail img {
-	height: 140px;
-	width: auto;
-}
-.team-member-text {
-	display: none;
-}
-.team-member {
-	width: 23%;
-	float: left;
-}
+/* Footer
+------------------------------------------ */
 #footer-widgets .widget .widget-title {
 	font-size: 1.5em;
 	font-weight: 300;
 	border-bottom: dotted 1px #cccccc;
 	padding-bottom: 10px;
+}
+#footer-widgets .widget a {
+	color: #cccccc !important;
 }
 #colophon h3 {
 	font-size: 1.2em;
@@ -52,3 +49,108 @@ h3.home-page {
 	margin: 10px 0 5px 0;
 	color: #fff;
 }
+
+/* Homepage
+------------------------------------------ */
+h3.home-page {
+	font-size: 2em;
+	color:#005184;
+	text-align: center;
+	font-weight: 300;
+}
+.panel-row-style-wide-grey {
+	background: #e7e7e7;
+	border:0;
+}
+.origin-widget.origin-widget-call-to-action-simple-light_dashed {
+	border: 0 !important;
+	border-radius: 0 !important;
+	-moz-border-radius: 0 !important;
+	-webkit-border-radius: 0 !important;
+	box-shadow: none !important;
+	background: #e7e7e7 !important;
+}
+.origin-widget.origin-widget-button-simple-white a, .pagination span, .entry-content .pagination span, .pagination a, .entry-content .pagination a {
+	background: #005184 !important;
+	color: #fff !important;
+	font-weight: 300 !important;
+	text-shadow:none !important;
+	box-shadow: none !important;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	border: 0 !important;
+}
+.pagination span, .entry-content .pagination span, .pagination a, .entry-content .pagination a {
+	background: none !important;
+	color: #999999 !important;
+}
+#panel-home-3-0-0 .vantage-grid-loop article {
+	margin-bottom: 10px;
+}
+#panel-home-3-0-0 .vantage-grid-loop article .grid-thumbnail img {
+	height: 140px;
+	width: auto;
+}
+#panel-home-3-0-0 .vantage-grid-loop article h3 {
+	font-size: .9em;
+	border-bottom: 0;
+}
+.vantage-grid-loop article h3 {
+	font-weight: 300;
+	margin:0;
+}
+.entry-content img {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+/* About Us
+------------------------------------------ */
+.panel-grid {
+	margin-bottom: 50px !important;
+}
+.entry-content h3, article.post .entry-header h1.entry-title, article.page .entry-header h1.entry-title, #pg-2826-1 h3 {
+	border-bottom: solid 1px #e7e7e7;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+#panel-2826-2-0-0 .category-team {
+	width: 23%;
+	float: left;
+	text-align: center;
+	border: solid 1px #e7e7e7;
+	padding: 10px;
+	margin:0 5px;
+}
+#panel-2826-2-0-0 .entry-meta {
+	display: none;
+}
+.vantage-grid-loop article .grid-thumbnail {
+	padding: 0;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+	border: 0;
+}
+.vantage-grid-loop article .grid-thumbnail:hover {
+	border: 0;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.team-position {
+	text-transform: lowercase;
+	font-style: italic;
+	font-size: .9em;
+	line-height: 1.3em;
+	color: #777777;
+	margin:10px;
+}
+
+/* Services
+------------------------------------------ */
+#pgc-1647-0-0 .vantage-grid-loop article {
+	width:33%;
+}
+
