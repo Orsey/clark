@@ -10,16 +10,19 @@
 get_header(); ?>
 
 <div id="portfolio" class="content-area">
-	<div id="folio-thumb">
-		<?php the_post_thumbnail(); ?>
-	</div> 
+
+		<?php if (has_post_thumbnail( $post->ID ) ): ?>
+		<?php $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' ); ?>
+		<div id="folio-thumb" style="background-image: url('<?php echo $image[0]; ?>')"></div>
+		<?php endif; ?>
+
+		<?php if( siteorigin_setting('navigation_post_nav') ) vantage_content_nav( 'nav-below' ); ?>
+
 	<div id="content" class="site-content" role="main">
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
 		<?php get_template_part( 'content', 'single' ); ?>
-
-		<?php if( siteorigin_setting('navigation_post_nav') ) vantage_content_nav( 'nav-below' ); ?>
 
 		<?php if ( comments_open() || '0' != get_comments_number() ) : ?>
 			<?php comments_template( '', true ); ?>
@@ -44,9 +47,9 @@ get_header(); ?>
 			<?php }?>
 		</div>
 		<div class="details">
-			<?php if(get_post_meta($post->ID,'portfolio_partner',true)) { ?>
+			<?php if(get_post_meta($post->ID,'portfolio_partners',true)) { ?>
 			<h3>Partner</h3>
-				<?php echo get_post_meta($post->ID,'portfolio_partner',true) ?>
+				<?php echo get_post_meta($post->ID,'portfolio_partners',true) ?>
 			<?php }?>
 		</div>
 	</div>

@@ -11,8 +11,7 @@
 
 get_header(); ?>
 
-<section id="primary" class="content-area">
-	<div id="content" class="site-content" role="main">
+<section id="portfolio" class="content-area">
 
 		<header class="page-header">
 			<?php
@@ -34,7 +33,6 @@ get_header(); ?>
 
 		<?php get_template_part( 'loops/loop-portfolio', siteorigin_setting('blog_archive_layout') ) ?>
 
-	</div><!-- #content .site-content -->
 </section><!-- #primary .content-area -->
 
 <?php get_footer(); ?>

@@ -18,10 +18,10 @@
 				<h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
 				<?php echo get_post_meta($post->ID,'portfolio_client',true) ?>
 				<?php echo get_post_meta($post->ID,'portfolio_location',true) ?>
-				<?php echo get_post_meta($post->ID,'portfolio_partner',true) ?>
+				<?php echo get_post_meta($post->ID,'portfolio_partners',true) ?>
 				
 			</article>
-			<?php if($i % 4 == 0) : ?><div class="clear"></div><?php endif; ?>
+			<?php if($i % 3 == 0) : ?><div class="clear"></div><?php endif; ?>
 		<?php endwhile; ?>
 	</div>
 
