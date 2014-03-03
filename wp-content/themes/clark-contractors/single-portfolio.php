@@ -9,12 +9,11 @@
 
 get_header(); ?>
 
-<div id="primary" class="content-area">
+<div id="portfolio" class="content-area">
+	<div id="folio-thumb">
+		<?php the_post_thumbnail(); ?>
+	</div> 
 	<div id="content" class="site-content" role="main">
-		
-		<?php echo get_post_meta($post->ID,'portfolio_client',true) ?>
-		<?php echo get_post_meta($post->ID,'portfolio_location',true) ?>
-		<?php echo get_post_meta($post->ID,'portfolio_partner',true) ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
@@ -29,8 +28,28 @@ get_header(); ?>
 	<?php endwhile; // end of the loop. ?>
 
 	</div><!-- #content .site-content -->
-</div><!-- #primary .content-area -->
+	<div id="folio-details">
+		<div id="details-title"><div class="folio-title"><span>Project</span> Details</div></div>
+		<div class="details">
+			<?php if(get_post_meta($post->ID,'portfolio_client',true)) { ?>
+			<h3>Client</h3>
+				<?php echo get_post_meta($post->ID,'portfolio_client',true) ?>
+			<?php }?>
 
-<?php get_sidebar(); ?>
+		</div>
+		<div class="details">
+			<?php if(get_post_meta($post->ID,'portfolio_location',true)) { ?>
+			<h3>Location</h3>
+				<?php echo get_post_meta($post->ID,'portfolio_location',true) ?>
+			<?php }?>
+		</div>
+		<div class="details">
+			<?php if(get_post_meta($post->ID,'portfolio_partner',true)) { ?>
+			<h3>Partner</h3>
+				<?php echo get_post_meta($post->ID,'portfolio_partner',true) ?>
+			<?php }?>
+		</div>
+	</div>
+</div><!-- #primary .content-area -->
 
 <?php get_footer(); ?>
