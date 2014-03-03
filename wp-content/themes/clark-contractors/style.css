@@ -32,6 +32,7 @@ a {
 	font-size: 1.9em;
 	border-bottom: 3px solid #fec42a;
 }
+
 /* Footer
 ------------------------------------------ */
 #footer-widgets .widget .widget-title {
@@ -152,5 +153,11 @@ h3.home-page {
 ------------------------------------------ */
 #pgc-1647-0-0 .vantage-grid-loop article {
 	width:33%;
+}
+
+/* Posts/Pages
+------------------------------------------ */
+article.post .entry-header .entry-thumbnail img, article.page .entry-header .entry-thumbnail img {
+	display: none;
 }
 
