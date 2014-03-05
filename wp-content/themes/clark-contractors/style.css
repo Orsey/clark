@@ -230,6 +230,10 @@ article.post .share-buttons, article.page .share-buttons {
 }
 #folio-categories li a {
 	color: #fff !important;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
 }
 #folio-categories li:hover, #folio-categories li:hover > a {
 	background:#fff;
@@ -241,6 +245,14 @@ article.post .share-buttons, article.page .share-buttons {
 	margin: 5px; 
 	padding: 10px 10px 20px 10px !important;
 	float: left;
+}
+.portfolio-grid-loop article:hover {
+	background:#f9f9f9;
+	border:solid 1px #fffl;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
 }
 .folio-cat {
 	margin-bottom:5px;
@@ -256,6 +268,10 @@ article.post .share-buttons, article.page .share-buttons {
 	display: block;
 	margin:0 0 0 3px;
 	line-height: inherit;
+	-webkit-transition: all 0.4s ease;
+	-moz-transition: all 0.4s ease;
+	-o-transition: all 0.4s ease;
+	transition: all 0.4s ease;
 }
 .folio-cat a:hover {
 	background:#fff;
