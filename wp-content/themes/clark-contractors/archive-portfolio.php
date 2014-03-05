@@ -12,8 +12,22 @@
 get_header(); ?>
 
 <section id="portfolio" class="content-area">
-
 		<header class="page-header">
+			<div id="folio-categories">
+				<?php
+					//list terms in a given taxonomy (useful as a widget for twentyten)
+					$taxonomy = 'portfolio_category';
+					$tax_terms = get_terms($taxonomy);
+					?>
+					<ul>
+						<li>All</li>
+						<?php
+						foreach ($tax_terms as $tax_term) {
+						echo '<li>' . '<a href="' . esc_attr(get_term_link($tax_term, $taxonomy)) . '" title="' . sprintf( __( "View all posts in %s" ), $tax_term->name ) . '" ' . '>' . $tax_term->name.'</a></li>';
+						}
+						?>
+					</ul>
+			</div>
 			<?php
 			if ( is_category() ) {
 				// show an optional category description
