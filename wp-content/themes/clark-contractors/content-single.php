@@ -13,11 +13,10 @@
 	<div class="entry-main">
 
 		<?php do_action('vantage_entry_main_top') ?>
-
 		<header class="entry-header">
-
+			<?php the_post_thumbnail( 'thumbnail' ) ?>
 			<h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'vantage' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
-			<?php echo get_post_meta($post->ID,'team_position',true) ?>
+			<div class="team-position"><?php echo get_post_meta($post->ID,'team_position',true) ?></div>
 			<?php if ( get_post_type() == 'post' ) : ?>
 				<div class="entry-meta">
 					<?php vantage_posted_on(); ?>
@@ -25,7 +24,6 @@
 			<?php endif; ?>
 
 		</header><!-- .entry-header -->
-
 		<div class="entry-content">
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'vantage' ) ); ?>
 			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'vantage' ), 'after' => '</div>' ) ); ?>

@@ -24,6 +24,9 @@ a {
 	border-bottom: 3px solid #FEC42A;
 	padding: 10px 0;
 }
+article.post .entry-header h1.entry-title, article.page .entry-header h1.entry-title {
+	font-size: 26px;
+}
 .main-navigation ul li:hover > a {
 	color: #fff !important;
 }
@@ -148,19 +151,57 @@ h3.home-page {
 	-moz-box-shadow: none;
 	-webkit-box-shadow: none;
 }
-.team-position {
-	text-transform: lowercase;
+.page-id-2826 .team-position {
+	text-transform: capitalize;
 	font-style: italic;
 	font-size: .9em;
 	line-height: 1.3em;
 	color: #777777;
-	margin:10px;
+	margin:10px 0 !important;
+	text-align: center !important;
+}
+
+/* Team Pages
+------------------------------------------ */
+.team article.post .entry-header {
+	float: left;
+	background:#e7e7e7;
+	padding:10px; 
+}
+.team article.post .entry-header h1.entry-title {
+	border-bottom: none;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+.team .team-position {
+	text-align: left;
+	margin:0;
+}
+.team .entry-content h4 {
+	color:#494949 !important;
+	font-weight: bold;
+	font-size: 1em;
+}
+.team .entry-meta {
+	display: none;
+}
+.team .attachment-thumbnail {
+	position: relative;
+	margin: 0;
+}
+.team .entry-content h3 {
+	border-bottom: none;
+	padding-bottom: 0;
+	margin-bottom: 0;
 }
 
 /* Services
 ------------------------------------------ */
 #pgc-1647-0-0 .vantage-grid-loop article {
 	width:33% !important;
+}
+.services .attachment-thumbnail, .services .entry-meta {
+	display: none;
 }
 
 /* Posts/Pages
@@ -382,16 +423,16 @@ ul.contact-form-elements {
 	padding: 0;
 	height: 30px;
 }
-.entry-content ul li {
+.contact-form-elements .entry-content ul li {
 	margin-left: 0 !important;
 }
 .contact-form-elements li {
 	float: left;
-	margin:0 5px;
-	width: 32%;
+	margin:0 5px !important;
+	width: 31%;
 }
 .contact-form-elements li:nth-child(2) {
-	margin:0 0 0 8px !important;
+	margin:0 0 0 10px !important;
 }
 .contact-form-elements li:last-child {
 	float: right;

@@ -17,21 +17,6 @@ function hwl_home_pagesize( $query ) {
 }
 add_action( 'pre_get_posts', 'hwl_home_pagesize', 1 );
 
-function span_first_word($title) {
-	$words = explode(' ', $title);
-	$words[0] = '<span>'.$words[0].'</span>';
-	$title = implode(' ', $words);
-	return $title;
-}
-add_filter('the_title', 'span_first_word');
-
-function wpzoom_fix_widgets($old_title) {
-    $title = explode(" ", $old_title,2);
-    $titleNew = "<span>$title[0]</span> $title[1]";
-    return $titleNew;
-}
-add_filter ('widget_title', 'wpzoom_fix_widgets');
-
 function filter_search($query) {
     if ($query->is_search) {
 	$query->set('post_type', array('post', 'portfolio'));
@@ -39,5 +24,15 @@ function filter_search($query) {
     return $query;
 };
 add_filter('pre_get_posts', 'filter_search');
+
+// add category nicenames in body and post class
+function category_id_class($classes) {
+    global $post;
+    foreach((get_the_category($post->ID)) as $category)
+        $classes[] = $category->category_nicename;
+    return $classes;
+}
+add_filter('post_class', 'category_id_class');
+add_filter('body_class', 'category_id_class');
 
 ?>
