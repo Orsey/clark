@@ -35,7 +35,7 @@ a {
 #main {
 	background:#fff;
 }
-.entry-content h1 span, .entry-content h2 span, .entry-content h3 span, .entry-content h4 span, .entry-content h5 span, .entry-content h6 span, .origin-widget.origin-widget-call-to-action-simple-light_dashed .title span, article.post .entry-header h1.entry-title a span, article.page .entry-header h1.entry-title a span, article.post .entry-header h1.entry-title span, article.page .entry-header h1.entry-title span, .portfolio-grid-loop article h3 span {
+.entry-content h1 span, .entry-content h2 span, .entry-content h3 span, .entry-content h4 span, .entry-content h5 span, .entry-content h6 span, .origin-widget.origin-widget-call-to-action-simple-light_dashed .title span, article.post .entry-header h1.entry-title a span, article.page .entry-header h1.entry-title a span, article.post .entry-header h1.entry-title span, article.page .entry-header h1.entry-title span, .portfolio-grid-loop article h3 span, .widget-title span {
 	font-weight: bold;
 }
 .vantage-grid-loop article h3 {

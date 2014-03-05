@@ -25,6 +25,13 @@ function span_first_word($title) {
 }
 add_filter('the_title', 'span_first_word');
 
+function wpzoom_fix_widgets($old_title) {
+    $title = explode(" ", $old_title,2);
+    $titleNew = "<span>$title[0]</span> $title[1]";
+    return $titleNew;
+}
+add_filter ('widget_title', 'wpzoom_fix_widgets');
+
 function filter_search($query) {
     if ($query->is_search) {
 	$query->set('post_type', array('post', 'portfolio'));
