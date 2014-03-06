@@ -203,6 +203,15 @@ h3.home-page {
 .services .attachment-thumbnail, .services .entry-meta {
 	display: none;
 }
+.one-third {
+	width: 30%;
+	float: left;
+	margin:0 10px 0 0;
+}
+.two-thirds {
+	width: 60%;
+	float:left;
+}
 
 /* Posts/Pages
 ------------------------------------------ */
